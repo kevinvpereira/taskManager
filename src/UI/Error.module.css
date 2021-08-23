@@ -1,0 +1,25 @@
+.error{
+    position: absolute;
+    color: white;
+    bottom: 2rem;
+    width: 100%;
+    z-index: 10;
+}
+
+.error__item {
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    width: 50%;
+    border-radius: 1rem;
+}
+
+.error__item span {
+    color:rgb(255, 0, 0);
+}
+
+.error__item h4 {
+    font-size: 1.8rem;
+    padding: 1rem;
+}

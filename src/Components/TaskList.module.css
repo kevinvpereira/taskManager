@@ -1,0 +1,48 @@
+.tasks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 75vh;
+}
+
+.tasks__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: white;
+}
+
+.tasks--start {
+  animation: start 1s ease-in-out forwards;
+}
+
+.tasks--end {
+  animation: end 1s ease-in-out forwards;
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes end {
+  0% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-10rem);
+  }
+}

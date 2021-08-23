@@ -1,0 +1,69 @@
+.home{
+    height: 100vh;
+    width: 100vw;
+
+    background-image: linear-gradient(
+      to bottom,
+      var(--black),
+      var(--secundary-color)
+    ),
+    url(../assets/img/disorder.jpg);
+    background-blend-mode: multiply;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-title);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.home h1{
+    margin: 0;
+    font-size: 5.5rem;
+    letter-spacing: 2.2rem;
+    padding: 1rem;
+
+    animation: appear-left .9s ease-in;
+}
+
+.home h2{
+    font-size: 3rem;
+    color: #ffeac7;
+    letter-spacing: 1rem;
+    padding: 1rem;
+    padding-bottom: 10rem;
+
+    animation: appear-right .5s ease-in;
+}
+
+.home button{
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+@keyframes appear-left {
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes appear-right {
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}

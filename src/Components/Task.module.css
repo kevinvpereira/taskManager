@@ -1,0 +1,168 @@
+.task {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateY(-0.5rem) translateX(0.5rem);
+  color: white;
+  font-size: 1.6rem;
+}
+
+.task--todo {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(28, 2, 2, 0.8),
+      rgba(28, 2, 2, 0.8)
+    ),
+    url(../assets/img/back\ \(3\).jpg);
+  background-size: "cover";
+}
+
+.task--doing {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 2, 28, 0.8),
+      rgba(2, 2, 28, 0.8)
+    ),
+    url(../assets/img/back\ \(1\).jpg);
+  background-size: "cover";
+}
+
+.task--done {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(2, 28, 2, 0.85),
+      rgba(2, 28, 2, 0.85)
+    ),
+    url(../assets/img/back\ \(5\).jpg);
+  background-size: "cover";
+}
+
+.task-back,
+.task {
+  min-width: 22rem;
+  min-height: 24rem;
+}
+
+.task__header {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.task__header span {
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-weight: 700;
+}
+
+.task__preheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task hr {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  height: 1px !important;
+}
+
+.task h3, .task__title {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  padding: 1rem;
+}
+
+.task p {
+  font-size: 1.1rem;
+  padding: 0.2rem;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-left: .4rem;
+}
+
+.status span {
+  font-size: 1.2rem;
+}
+
+.task__step {
+    font-size: .9rem !important;
+}
+
+.task__arrow {
+    font-size: 2rem;
+}
+
+.task input, .status input, .task textarea, .task select, .task option {
+  background: rgba(253, 253, 253, 0.1);
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  font-size: 1.2rem;
+  padding: .8rem 0 !important;
+}
+
+.task select option {
+  background: white !important;
+  color: black;
+}
+
+.task select {
+  border: none;
+  margin-right: 1.4rem;
+}
+
+.task__title {
+  font-size: 2rem !important;
+  margin: auto 1.4rem;
+}
+
+.task__preheader input, .task textarea {
+  margin: auto 1.4rem;
+}
+
+.task span, .task h3, .task p {
+  cursor: pointer;
+}
+
+.task__actions{
+  display: flex;
+  gap: .5rem;
+  padding: .6rem;
+}
+
+.task__actions--remove {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.task__actions--remove:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.task button {
+  font-size: 1.1rem;
+  padding: .9rem;
+}
+
+@keyframes start {
+  0%{
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}

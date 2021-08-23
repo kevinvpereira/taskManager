@@ -1,13 +1,38 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+
+  --primary-color: #ff9d00;
+  --secundary-color: rgba(2, 6, 63, .8);
+  --black: rgba(10, 10, 0, .9);
+  --font-title: 'Hahmlet', serif;  
+}  
+
+
+.fade-enter{
+  opacity: 0;
+}
+
+.fade-enter-active{
+  opacity: 1;
+  transition: opacity .3s ease-out;
+}
+
+.fade-exit{
+  opacity: 1;
+}
+
+.fade-exit-active{
+  opacity: 0;
+  transform: translateX(5rem);
+  transition: opacity .3s ease-out;
 }

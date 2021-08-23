@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Home from "./Pages/Home";
+import Tasks from "./Pages/Tasks";
+import Login from "./Pages/Login";
+import { useContext } from "react";
+import AuthContext from "./store/auth-context";
+import Header from "./UI/Header";
 
 function App() {
+  const authContext = useContext(AuthContext);
+  const isUserLoggedIn = authContext.isLoggedIn;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isUserLoggedIn && <Header/>}
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+
+        {isUserLoggedIn && <Route path="/tasks">
+          <Tasks />
+        </Route>}
+
+        <Route path="/login">
+          <Login />
+        </Route>
+
+        <Route path="*">
+          <Redirect to="/" />
+        </Route>
+      </Switch>
     </div>
   );
 }
