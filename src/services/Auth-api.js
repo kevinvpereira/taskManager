@@ -6,4 +6,4 @@ const AuthApi = axios.create({
 
 export default AuthApi;
 
-export const AuthApiKey = "AIzaSyBPVVcCKFgXWuLQVkgHaaMDBiBa8zkY3_4";
+export const AuthApiKey = "auth key";
